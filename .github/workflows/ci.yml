@@ -1,0 +1,33 @@
+name: CI
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  lint-and-conditional-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Run Super-Linter for repo docs
+        uses: github/super-linter@v4
+        env:
+          VALIDATE_MARKDOWN: true
+          DEFAULT_BRANCH: main
+
+      - name: Conditional Android build (if Android app exists)
+        run: |
+          if [ -f "./gradlew" ]; then
+            echo "Gradle wrapper found — running assembleDebug"
+            chmod +x ./gradlew
+            ./gradlew assembleDebug --no-daemon
+          elif [ -d "app" ] && ls app | grep -E "build.gradle|build.gradle.kts" >/dev/null 2>&1; then
+            echo "Android app module detected — running ./gradlew assembleDebug"
+            chmod +x ./gradlew
+            ./gradlew assembleDebug --no-daemon
+          else
+            echo "No Android project found — skipping build"
+          fi
