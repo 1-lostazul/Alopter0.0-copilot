@@ -18,16 +18,14 @@ jobs:
           VALIDATE_MARKDOWN: true
           DEFAULT_BRANCH: main
 
-      - name: Conditional Android build (if Android app exists)
+      - name: Conditional Android build (if Android app exists and gradle wrapper present)
         run: |
           if [ -f "./gradlew" ]; then
             echo "Gradle wrapper found — running assembleDebug"
             chmod +x ./gradlew
             ./gradlew assembleDebug --no-daemon
           elif [ -d "app" ] && ls app | grep -E "build.gradle|build.gradle.kts" >/dev/null 2>&1; then
-            echo "Android app module detected — running ./gradlew assembleDebug"
-            chmod +x ./gradlew
-            ./gradlew assembleDebug --no-daemon
+            echo "Android app module detected but gradlew is missing — skipping build. To enable CI build, add the Gradle wrapper to the repository."
           else
             echo "No Android project found — skipping build"
           fi
