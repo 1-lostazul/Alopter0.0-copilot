@@ -1,6 +1,6 @@
 # App module (Android) — AIopter
 
-This is a minimal Android app scaffold for AIopter. It contains a placeholder MainActivity implemented with Jetpack Compose.
+This is a minimal Android app scaffold for AIopter. It contains a basic MVP-ready MainActivity with a clean onboarding flow and a simple post-onboarding home state.
 
 Notes:
 - ApplicationId: com.aiopter.app

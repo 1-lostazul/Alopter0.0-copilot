@@ -41,8 +41,8 @@ Brand direction:
 - The rotor replaces the “O” in the AIopter wordmark.
 - That same rotor will eventually serve as the Android app icon and the floating on-screen assistant button.
 
-For now:
+Current execution docs for launch and monetization:
 
-Do not start coding the application.
-
-The purpose of this task is only to create a clean, professional GitHub repository that will become the official source-of-truth repository for AIopter.
+- `/home/runner/work/Alopter0.0-copilot/Alopter0.0-copilot/docs/GO_TO_MARKET_RESEARCH.md`
+- `/home/runner/work/Alopter0.0-copilot/Alopter0.0-copilot/docs/MVP_MONETIZATION_IMPLEMENTATION.md`
+- `/home/runner/work/Alopter0.0-copilot/Alopter0.0-copilot/docs/PLAY_STORE_RELEASE_CHECKLIST.md`
