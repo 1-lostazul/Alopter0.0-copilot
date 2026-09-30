@@ -16,6 +16,7 @@ import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Surface
 import androidx.compose.material3.Text
 import androidx.compose.runtime.*
+import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
@@ -35,7 +36,7 @@ class MainActivity : ComponentActivity() {
 
 @Composable
 private fun AIopterMvpApp() {
-    var onboardingComplete by remember { mutableStateOf(false) }
+    var onboardingComplete by rememberSaveable { mutableStateOf(false) }
     if (!onboardingComplete) {
         OnboardingScreen(onContinue = { onboardingComplete = true })
     } else {
@@ -45,7 +46,7 @@ private fun AIopterMvpApp() {
 
 @Composable
 private fun OnboardingScreen(onContinue: () -> Unit) {
-    var step by remember { mutableIntStateOf(0) }
+    var step by rememberSaveable { mutableIntStateOf(0) }
     val steps = listOf(
         "Welcome to AIopter",
         "Ask questions by text or voice. AIopter answers inside a compact panel.",
