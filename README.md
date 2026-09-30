@@ -43,6 +43,6 @@ Brand direction:
 
 Current execution docs for launch and monetization:
 
-- `/home/runner/work/Alopter0.0-copilot/Alopter0.0-copilot/docs/GO_TO_MARKET_RESEARCH.md`
-- `/home/runner/work/Alopter0.0-copilot/Alopter0.0-copilot/docs/MVP_MONETIZATION_IMPLEMENTATION.md`
-- `/home/runner/work/Alopter0.0-copilot/Alopter0.0-copilot/docs/PLAY_STORE_RELEASE_CHECKLIST.md`
+- [docs/GO_TO_MARKET_RESEARCH.md](docs/GO_TO_MARKET_RESEARCH.md)
+- [docs/MVP_MONETIZATION_IMPLEMENTATION.md](docs/MVP_MONETIZATION_IMPLEMENTATION.md)
+- [docs/PLAY_STORE_RELEASE_CHECKLIST.md](docs/PLAY_STORE_RELEASE_CHECKLIST.md)

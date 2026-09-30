@@ -49,8 +49,8 @@ private fun OnboardingScreen(onContinue: () -> Unit) {
     var step by rememberSaveable { mutableIntStateOf(0) }
     val steps = listOf(
         "Welcome to AIopter",
-        "Ask questions by text or voice. AIopter answers inside a compact panel.",
-        "Privacy first: request permissions only when needed, and stop anytime with Quick Kill."
+        "The current MVP is a static screen. Text and voice questions and a compact answer panel are planned.",
+        "Permission requests, screen capture, microphone access, and Quick Kill are planned but not implemented."
     )
 
     Column(
@@ -100,7 +100,7 @@ private fun MvpHomeScreen() {
         )
         Spacer(modifier = Modifier.height(12.dp))
         Text(
-            text = "• Ask a question\n• Get concise AI help\n• Control permissions\n\nMonetization mode: ad-supported free tier (configured in release checklist).",
+            text = "Current MVP: onboarding and a static home screen.\nText and voice questions, AI answers, and permission controls are planned.\n\nMonetization: ads are planned but not enabled.",
             style = MaterialTheme.typography.bodyLarge
         )
     }
