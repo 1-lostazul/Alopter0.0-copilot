@@ -19,8 +19,7 @@
 - ai translation android
 - ai reply helper
 
-## 4) Competitor scan starter (from provided reference + related category)
-- **Reference app:** mobile.app.maker (provided link).
+## 4) Competitor scan starter
 - Review direct/adjacent apps in Play categories containing: assistant, overlay, AI chat, OCR helper.
 - Compare:
   - Value proposition clarity in first screenshot and first two lines of description.
